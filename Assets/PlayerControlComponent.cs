@@ -5,11 +5,17 @@ using Holoville.HOTween;
 public class PlayerControlComponent : MonoBehaviour {
 
 	public GameObject playerObject;
+    private Transform playerTransform;
+    private Rigidbody2D playerRigidBody;
+
+    public GameObject targetVisual;
+
+    public float maxDistance = 4.0f;
 	public float playerSpeed = 3;
 	public EaseType easeType = EaseType.Linear;
 
 	public Vector3 currentTarget;
-	private Tweener currentTween = null;
+    public float startTargetTime;
 
 	void GoToGestureTarget ( Gesture gesture ) {
 		Vector3 worldPosition = Camera.main.ScreenToWorldPoint (new Vector3 (gesture.Position.x, gesture.Position.y, 0f));
@@ -19,13 +25,7 @@ public class PlayerControlComponent : MonoBehaviour {
 
 	void GoToPosition ( Vector3 worldPosition ) {
 		currentTarget = worldPosition;
-		if (currentTween != null) {
-			currentTween.Kill ();
-		}
-		currentTween = HOTween.To (playerObject.transform, playerSpeed, new TweenParms()
-		                           .Prop("position", currentTarget, false) // Position tween (set as relative)
-		                           .Ease(easeType) // Ease
-		                           );
+        startTargetTime = Time.time;
 	}
 
 	void OnTap(TapGesture gesture) { 
@@ -45,10 +45,15 @@ public class PlayerControlComponent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        playerTransform = playerObject.transform;
+        playerRigidBody = playerObject.rigidbody2D;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        Vector3 relativeTarget = currentTarget - playerTransform.position;
+        float timeFactor = (1f - (Mathf.Min(Time.time - startTargetTime,5.0f) / 5.0f));
+        playerRigidBody.velocity = relativeTarget * timeFactor * playerSpeed;
+
 	}
 }
