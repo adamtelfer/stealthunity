@@ -6,17 +6,43 @@ public class PlayerControlComponent : MonoBehaviour {
 
 	public PlayerController playerController;
 
-	void GoToGestureTarget ( Gesture gesture ) {
-		Vector3 worldPosition = Camera.main.ScreenToWorldPoint (new Vector3 (gesture.Position.x, gesture.Position.y, 0f));
-		worldPosition = new Vector3 (worldPosition.x, worldPosition.y, 0f);
-		playerController.SetTarget (worldPosition, gesture.Fingers[0]);
+	private FingerGestures.Finger currentFinger;
+
+	void Start () {
+		currentFinger = null;
 	}
 
-	void OnFingerDown(FingerDownEvent e) { /* your code here */ }
+	void GoToTouchTarget ( Vector2 position, float speed ) {
+		Vector3 worldPosition = Camera.main.ScreenToWorldPoint (new Vector3 (position.x, position.y, 0f));
+		worldPosition = new Vector3 (worldPosition.x, worldPosition.y, 0f);
+		playerController.movementComponent.SetTarget(worldPosition, speed);
+	}
 
-	void OnFingerUp(FingerUpEvent e) { /* your code here */ }
+	void OnFingerDown(FingerDownEvent e) {
+		if (currentFinger == null) {
+			currentFinger = e.Finger;
+			GoToTouchTarget(e.Position, 1f);
+		}
+	}
 
-	void OnFingerMove(FingerMotionEvent e) { /* your code here */ }
+	void OnFingerUp(FingerUpEvent e) {
+		if (currentFinger == e.Finger) {
+			currentFinger = null;
+            GoToTouchTarget(e.Position, 1f);
+		}
+	}
 
-	void OnFingerStationary(FingerMotionEvent e) { /* your code here */ }
+	void OnFingerMove(FingerMotionEvent e) {
+        if (currentFinger == e.Finger)
+        {
+            GoToTouchTarget(e.Position, 1f);
+        }
+	}
+
+	void OnFingerStationary(FingerMotionEvent e) { 
+		if (currentFinger == e.Finger)
+        {
+            GoToTouchTarget(e.Position, 1f);
+        }
+	}
 }

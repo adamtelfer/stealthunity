@@ -7,32 +7,8 @@ public class PlayerController : MonoBehaviour {
 	public static string PlayerMoveState = "PlayerWalk";
 
 	public PlayerControlComponent controlComponent;
-
-	public Animator playerSpriteAnimator;
-
-
-	// Movement Controller
-
-	private Vector3 currentTarget;
-	public int currentFingerIndex;
-	public float baseSpeed;
-	public float maxSpeed;
-
-
-	public void SetTarget ( Vector3 target, FingerGestures.Finger f) {
-		playerSpriteAnimator.Play(PlayerMoveState);
-
-	}
-
-	void MoveUpdate() {
-
-	}
-
-	void StopMovement () {
-		playerSpriteAnimator.Play (PlayerIdleState);
-		currentTarget = transform.position;
-		rigidbody2D.velocity = Vector3.zero;
-	}
+    public MovementComponent movementComponent;
+    public SpriteUpdaterComponent spriteUpdaterComponent;
 
     // Collision Controls
 	void OnTriggerEnter2D ( Collider2D other ) {
@@ -56,20 +32,8 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// Spawn Points
-
 	public void DieAndGoToSpawnPoint (SpawnPoint spawnPoint) {
 		this.transform.position = spawnPoint.transform.position;
-	}
-
-
-	// Use this for initialization
-	void Start () {
-		playerSpriteAnimator.Play (PlayerIdleState);
-		playerSpriteAnimator.speed = 1f;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		MoveUpdate ();
+        movementComponent.StopAllMovement();
 	}
 }
