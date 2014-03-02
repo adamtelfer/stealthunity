@@ -45,13 +45,67 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: link_up
+    - name: link_up_0
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 2869
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_up_1
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 2869
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_up_2
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 2869
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_up_3
       rect:
         serializedVersion: 2
         x: 526
         y: 2869
         width: 16
-        height: 22
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_up_4
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 2869
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_up_5
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 2869
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: SNES - Legend of Zelda The A Link to the Past - Link_6
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 2869
+        width: 16
+        height: 24
       alignment: 0
       pivot: {x: .5, y: .5}
   spritePackingTag: 

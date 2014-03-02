@@ -29,7 +29,7 @@ public class CameraFollow : MonoBehaviour {
 		}
 	}
 	
-	void Update() {
+	void LateUpdate() {
 		if (target != null) {
 			// Point camera towards target
 			Vector3 targetPosition = target.position;

@@ -4,8 +4,10 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	private static GameManager _sharedManager;
+	
+	public PlayerController playerController;
 
-	public GameObject playerObject;
+	public SpawnPoint currentSpawnPoint;
 
 	public int startingLives = 2;
 	private int loot;
@@ -48,6 +50,8 @@ public class GameManager : MonoBehaviour {
 
 		if (lives <= 0) {
 			GameOver ();
+		} else {
+			playerController.DieAndGoToSpawnPoint(currentSpawnPoint);
 		}
 	}
 
