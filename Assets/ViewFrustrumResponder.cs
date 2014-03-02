@@ -9,15 +9,19 @@ public class ViewFrustrumResponder : MonoBehaviour {
 	void Start () {
 	}
 	
-	void OnTriggerEnter ( Collider other ) {
-		Debug.Log ("View Trigger");
+	void OnTriggerEnter2D ( Collider2D other ) {
+		Debug.Log ("OnTriggerEnter " + other.name + " " + other.tag);
+
+		if (other.tag == "EnemySoundFrustrum") {
+
+		}
 	}
 
-	void OnTriggerExit ( Collider other ) {
-		Debug.Log ("View Trigger Exit");
+	void OnTriggerExit2D ( Collider2D other ) {
+		Debug.Log ("OnTriggerExit " + other.name + " " + other.tag);
 	}
 
-	void OnCollisionEnter ( Collision other ) {
-		Debug.Log ("View Collision");
+	void OnCollisionEnter2D ( Collision2D other ) {
+		Debug.Log ("OnCollisionEnter " + other.collider.name + " " + other.collider.tag);
 	}
 }

@@ -12,6 +12,8 @@ public class PlayerControlComponent : MonoBehaviour {
 
     public float maxDistance = 4.0f;
 	public float playerSpeed = 1f;
+	public float doubleSpeed = 2f;
+
 	public EaseType easeType = EaseType.Linear;
 
 	public Vector3 currentTarget;
@@ -28,7 +30,11 @@ public class PlayerControlComponent : MonoBehaviour {
         startTargetTime = Time.time;
 	}
 
-	void OnShortPress(LongPressGesture gesture) { 
+	void OnDoubleTap (TapGesture gesture) {
+		GoToGestureTarget (gesture);
+	}
+
+	void OnLongPress(LongPressGesture gesture) { 
 
 		//Debug.Log( "Short gesture detected at " + gesture.Position + ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
 		

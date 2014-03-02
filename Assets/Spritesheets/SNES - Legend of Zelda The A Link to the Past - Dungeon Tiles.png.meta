@@ -207,5 +207,77 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: wall_right
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 741
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: wall_up
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 758
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: wall_down
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 716
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: wall_left
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 741
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: statue
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 1063
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: large_statue
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1090
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: warppoint_disabled
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1105
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: warp_point
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 1721
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 
