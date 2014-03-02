@@ -11,7 +11,7 @@ public class PlayerControlComponent : MonoBehaviour {
     public GameObject targetVisual;
 
     public float maxDistance = 4.0f;
-	public float playerSpeed = 3;
+	public float playerSpeed = 1f;
 	public EaseType easeType = EaseType.Linear;
 
 	public Vector3 currentTarget;
@@ -28,17 +28,25 @@ public class PlayerControlComponent : MonoBehaviour {
         startTargetTime = Time.time;
 	}
 
+	void OnShortPress(LongPressGesture gesture) { 
+
+		//Debug.Log( "Short gesture detected at " + gesture.Position + ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
+		
+		GoToGestureTarget (gesture);  
+	
+	}
+
 	void OnTap(TapGesture gesture) { 
-		Debug.Log( "Tap gesture detected at " + gesture.Position + 
-		          ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
+		//Debug.Log( "Tap gesture detected at " + gesture.Position + 
+		//          ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
 
 		GoToGestureTarget (gesture); 
 	
 	}
 
 	void OnDrag(DragGesture gesture) {
-		Debug.Log( "Drag gesture detected at " + gesture.Position + 
-		          ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
+		//Debug.Log( "Drag gesture detected at " + gesture.Position + 
+		//          ". It was sent by " + gesture.Recognizer.name + " state : " + gesture.State);
 
 		GoToGestureTarget (gesture);
 	}
@@ -53,7 +61,8 @@ public class PlayerControlComponent : MonoBehaviour {
 	void Update () {
         Vector3 relativeTarget = currentTarget - playerTransform.position;
         float timeFactor = (1f - (Mathf.Min(Time.time - startTargetTime,5.0f) / 5.0f));
-        playerRigidBody.velocity = relativeTarget * timeFactor * playerSpeed;
+		float s = playerSpeed;
+        playerRigidBody.velocity = relativeTarget * timeFactor * s;
 
 	}
 }

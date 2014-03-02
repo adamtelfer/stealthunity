@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 2a9f127c54416854f927d321bd6cf14a
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 16
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: darkdungeon
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1771
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: purpledungeon
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1771
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: dungeon3
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1754
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stairup
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 1754
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stairright
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1754
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stairdown
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1754
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: stairleft
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1754
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lootbig
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1707
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lootopen
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1681
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lootsmall
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1711
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: lootopen
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1711
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: pillarright
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1562
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: SNES - Legend of Zelda The A Link to the Past - Dungeon Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 1531
+        width: 27
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: pillarleft
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1545
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: pillarup
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1586
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: pillardown
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1586
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowleft
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1380
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: windowright
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1380
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

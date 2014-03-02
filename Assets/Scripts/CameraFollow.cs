@@ -9,6 +9,9 @@ public class CameraFollow : MonoBehaviour {
 	public float smoothTime = 0.5f;
 	// Distance from target
 	public float distance = 5.0f;
+
+	public float minimumY = 0.0f;
+	public float maximumY = 200f;
 	
 	// Local copy of transform to reduce component lookups
 	Transform _transform;
@@ -30,6 +33,11 @@ public class CameraFollow : MonoBehaviour {
 		if (target != null) {
 			// Point camera towards target
 			Vector3 targetPosition = target.position;
+
+			targetPosition = new Vector3 (targetPosition.x, Mathf.Max( Mathf.Min (targetPosition.y, maximumY) , minimumY ), targetPosition.z);
+
+
+
 			targetPosition.z -= distance;
 			
 			_transform.position = Vector3.SmoothDamp(_transform.position, targetPosition, ref _smoothVelocity, smoothTime);
