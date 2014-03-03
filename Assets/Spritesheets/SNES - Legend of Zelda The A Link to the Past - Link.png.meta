@@ -108,5 +108,167 @@ TextureImporter:
         height: 24
       alignment: 0
       pivot: {x: .5, y: .5}
+    - name: link_down_0
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_down_6
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 2873
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_death_0
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 2965
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_death_1
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 2968
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_death_2
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 2971
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_death_3
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 2974
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_0
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_1
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_2
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_3
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_4
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_5
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: link_right_6
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 2873
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
   spritePackingTag: 
   userData: 

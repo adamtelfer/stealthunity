@@ -17,6 +17,11 @@ public class MovementComponent : MonoBehaviour {
     public delegate void FacingDirectionUpdate(MovementComponent component);
     public FacingDirectionUpdate facingDirectionUpdateDelegate;
 
+	public FacingDirection CurrentFacingDirection
+	{
+		get { return _facingDirection; }
+	}
+
     public enum MovementState
     {
         Moving,
@@ -38,7 +43,7 @@ public class MovementComponent : MonoBehaviour {
     {
         currentTarget = worldPosition;
 
-        Vector3 direction = transform.position - worldPosition;
+        Vector3 direction = worldPosition - transform.position;
         direction.Normalize();
         if (direction.x > 0.5f)
         {
@@ -46,12 +51,12 @@ public class MovementComponent : MonoBehaviour {
         } else if (direction.x < -0.5f)
         {
             _facingDirection = FacingDirection.Left;
-        } else if (direction.y > 0.5f)
-        {
-            _facingDirection = FacingDirection.Up;
-        } else
+        } else if (direction.y < 0f)
         {
             _facingDirection = FacingDirection.Down;
+        } else
+        {
+            _facingDirection = FacingDirection.Up;
         }
         facingDirectionUpdateDelegate(this);
 
