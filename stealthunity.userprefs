@@ -1,11 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpriteUpdaterComponent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\MovementComponent.cs" Line="54" Column="15" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovementComponent.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerControlComponent.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SpriteUpdaterComponent.cs" Line="35" Column="26" />
-      <File FileName="Assets\AssetStoreExtensions\Holoville\HOTween Extensions\HOTweenManager\Editor\HOTweenEditor.cs" Line="52" Column="1" />
+      <File FileName="Assets\Scripts\SpriteUpdaterComponent.cs" Line="1" Column="1" />
+      <File FileName="Assets\AssetStoreExtensions\Holoville\HOTween Extensions\HOTweenManager\Editor\HOTweenEditor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

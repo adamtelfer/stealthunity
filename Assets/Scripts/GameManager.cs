@@ -36,12 +36,16 @@ public class GameManager : MonoBehaviour {
 	public void RestartGame() {
 		lives = startingLives;
 		loot = 0;
-		gameChangeResponder (this);
+		if (gameChangeResponder != null) {
+			gameChangeResponder (this);
+		}
 	}
 
 	public void GameOver() {
 		lives = 0;
-		gameOverResponder (this);
+		if (gameOverResponder != null) {
+			gameOverResponder (this);
+		}
 	}
 
 	public void LostALife() {
