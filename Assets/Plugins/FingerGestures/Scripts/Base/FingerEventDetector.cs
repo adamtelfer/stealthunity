@@ -119,7 +119,14 @@ public abstract class FingerEventDetector<T> : FingerEventDetector where T : Fin
 
     protected virtual T GetEvent( int fingerIndex )
     {
-        return fingerEventsList[fingerIndex];
+        if (fingerEventsList != null)
+        {
+            return fingerEventsList[fingerIndex];
+        }
+        else
+        {
+            return null;
+        }
     }
 }
 

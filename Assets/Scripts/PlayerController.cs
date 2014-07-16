@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     // Collision Controls
 	void OnTriggerEnter2D ( Collider2D other ) {
-		Debug.Log ("OnTriggerEnter " + other.name + " " + other.tag);
+		//Debug.Log ("OnTriggerEnter " + other.name + " " + other.tag);
 		
 		if (other.tag == "EnemySoundFrustrum") {
 			
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void OnTriggerExit2D ( Collider2D other ) {
-		Debug.Log ("OnTriggerExit " + other.name + " " + other.tag);
+		//Debug.Log ("OnTriggerExit " + other.name + " " + other.tag);
 	}
 	
 	void OnCollisionEnter2D ( Collision2D other ) {
@@ -33,7 +33,14 @@ public class PlayerController : MonoBehaviour {
 
 	// Spawn Points
 	public void DieAndGoToSpawnPoint (SpawnPoint spawnPoint) {
-		this.transform.position = spawnPoint.transform.position;
-        movementComponent.StopAllMovement();
+        if (spawnPoint == null)
+        {
+            this.transform.position = spawnPoint.transform.position;
+            movementComponent.StopAllMovement();
+        }
+        else
+        {
+            Debug.LogError("Error : Spawn Point not set");
+        }
 	}
 }

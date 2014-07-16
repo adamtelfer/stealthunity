@@ -39,7 +39,7 @@ public class SpriteUpdaterComponent : MonoBehaviour {
 			animatorState += upState;
 		}
 
-		Debug.Log ("Play State: " + animatorState);
+		//Debug.Log ("Play State: " + animatorState);
 		animatorComponent.Play (animatorState);
 
 	}

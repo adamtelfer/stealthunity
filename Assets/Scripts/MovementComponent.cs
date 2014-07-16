@@ -106,6 +106,9 @@ public class MovementComponent : MonoBehaviour {
         currentTarget = Vector3.zero;
         currentSpeed = 0f;
         _movementState = MovementState.Stopped;
-        movementStateUpdateDelegate(this);
+        if (movementStateUpdateDelegate != null)
+        {
+            movementStateUpdateDelegate(this);
+        }
     }
 }

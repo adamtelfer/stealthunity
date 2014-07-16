@@ -3,9 +3,11 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
+    public MovementComponent movementComponent;
+
 	// Use this for initialization
 	void Start () {
-	
+	    
 	}
 	
 	// Update is called once per frame
