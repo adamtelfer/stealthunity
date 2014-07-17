@@ -58,12 +58,19 @@ public class MovementComponent : MonoBehaviour {
         {
             _facingDirection = FacingDirection.Up;
         }
-        facingDirectionUpdateDelegate(this);
+
+        if (facingDirectionUpdateDelegate != null)
+        {
+            facingDirectionUpdateDelegate(this);
+        }
 
 
         currentSpeed = speed;
         _movementState = MovementState.Moving;
-        movementStateUpdateDelegate(this);
+        if (movementStateUpdateDelegate != null)
+        {
+            movementStateUpdateDelegate(this);
+        }
     }
 
     public float stopAtDistanceSQ = 0.5f;

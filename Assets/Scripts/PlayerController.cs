@@ -33,14 +33,14 @@ public class PlayerController : MonoBehaviour {
 
 	// Spawn Points
 	public void DieAndGoToSpawnPoint (SpawnPoint spawnPoint) {
-        if (spawnPoint == null)
-        {
+        //if (spawnPoint == null)
+        //{
             this.transform.position = spawnPoint.transform.position;
             movementComponent.StopAllMovement();
-        }
-        else
-        {
-            Debug.LogError("Error : Spawn Point not set");
-        }
+        //}
+        //else
+        //{
+        //    Debug.LogError("Error : Spawn Point not set");
+        //}
 	}
 }
