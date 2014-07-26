@@ -12,17 +12,34 @@ public class PlayerController : MonoBehaviour {
 
     // Collision Controls
 	void OnTriggerEnter2D ( Collider2D other ) {
-		//Debug.Log ("OnTriggerEnter " + other.name + " " + other.tag);
-		
-		if (other.tag == "EnemySoundFrustrum") {
-			
-		} else if (other.tag == "EnemyViewFrustrum") {
-
+		Debug.Log ("OnTriggerEnter " + other.name + " " + other.tag);
+		if (other.tag == "EnemyViewFrustrum") {
+            EnemyDetectorComponent detector = other.gameObject.GetComponent<EnemyDetectorComponent>();
+            if (detector != null)
+            {
+                detector.DetectedPlayer(this);
+            }
+            else
+            {
+                Debug.LogError("ViewDetector has not DetectorComponent");
+            }
 		}
 	}
 	
 	void OnTriggerExit2D ( Collider2D other ) {
-		//Debug.Log ("OnTriggerExit " + other.name + " " + other.tag);
+		Debug.Log ("OnTriggerExit " + other.name + " " + other.tag);
+        if (other.tag == "EnemyViewFrustrum")
+        {
+            EnemyDetectorComponent detector = other.gameObject.GetComponent<EnemyDetectorComponent>();
+            if (detector != null)
+            {
+                detector.NoDetectPlayer(this);
+            }
+            else
+            {
+                Debug.LogError("ViewDetector has no DetectorComponent");
+            }
+        }
 	}
 	
 	void OnCollisionEnter2D ( Collision2D other ) {

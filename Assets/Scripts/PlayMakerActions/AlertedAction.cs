@@ -4,12 +4,10 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
     [ActionCategory(ActionCategory.Movement)]
-    [Tooltip("Moves AI Character forward")]
-    public class EnemyMoveForwardAction : FsmStateAction
+    [Tooltip("AI Player Detects Player")]
+    public class AlertedAction : FsmStateAction
     {
         public EnemyController enemyController;
-
-        public float range = 20f;
 
         public override void Reset()
         {
@@ -22,7 +20,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            enemyController.movementComponent.SetTarget(new Vector3(UnityEngine.Random.Range(-range, range), UnityEngine.Random.Range(-range, range), 0f) + this.Owner.transform.position, 0.2f);
+            enemyController.movementComponent.StopAllMovement(); 
             Finish();
         }
     }

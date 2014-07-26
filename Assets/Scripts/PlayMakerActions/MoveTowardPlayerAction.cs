@@ -4,12 +4,12 @@ using UnityEngine;
 namespace HutongGames.PlayMaker.Actions
 {
     [ActionCategory(ActionCategory.Movement)]
-    [Tooltip("Moves AI Character forward")]
-    public class EnemyMoveForwardAction : FsmStateAction
+    [Tooltip("Move towards the alerted Player")]
+    public class MoveTowardPlayerAction : FsmStateAction
     {
         public EnemyController enemyController;
 
-        public float range = 20f;
+        public float speed = 0.2f;
 
         public override void Reset()
         {
@@ -22,7 +22,14 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            enemyController.movementComponent.SetTarget(new Vector3(UnityEngine.Random.Range(-range, range), UnityEngine.Random.Range(-range, range), 0f) + this.Owner.transform.position, 0.2f);
+            if (enemyController.alerted)
+            {
+                enemyController.movementComponent.SetTarget(new Vector3(enemyController.lastKnownPosition.x, enemyController.lastKnownPosition.y, 0f), speed);
+            }
+            else
+            {
+                PlayMakerFSM.BroadcastEvent("ALERT_PLAYERLOST");
+            }
             Finish();
         }
     }
