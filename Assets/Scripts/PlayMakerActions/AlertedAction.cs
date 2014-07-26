@@ -20,7 +20,7 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            //enemyController.movementComponent.StopAllMovement(); 
+            enemyController.movementComponent.StopAllMovement(); 
             Finish();
         }
     }
