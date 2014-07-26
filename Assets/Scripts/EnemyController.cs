@@ -4,6 +4,7 @@ using System.Collections;
 public class EnemyController : MonoBehaviour {
 
     public MovementComponent movementComponent;
+    public PlayMakerFSM behavior;
     
     public GameObject detectorRoot;
 
@@ -19,7 +20,7 @@ public class EnemyController : MonoBehaviour {
         if (detector.alerted)
         {
             Debug.Log(alertEvent);
-            PlayMakerFSM.BroadcastEvent(alertEvent);
+            behavior.SendEvent(alertEvent);
             alerted = true;
             playerFound = player;
         }
@@ -27,7 +28,7 @@ public class EnemyController : MonoBehaviour {
         {
             Debug.Log(lostEvent);
             alerted = false;
-            PlayMakerFSM.BroadcastEvent(lostEvent);
+            behavior.SendEvent(lostEvent);
         }
     }
 
@@ -53,4 +54,19 @@ public class EnemyController : MonoBehaviour {
             lastKnownPosition = new Vector2(playerFound.transform.position.x,playerFound.transform.position.y);
         }
 	}
+
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        if (alerted)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.yellow;
+        }
+        
+        Gizmos.DrawSphere(lastKnownPosition, 0.25f);
+    }
 }

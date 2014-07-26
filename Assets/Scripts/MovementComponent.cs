@@ -107,6 +107,13 @@ public class MovementComponent : MonoBehaviour {
         }
     }
 
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+        Gizmos.color = Color.white;
+        Gizmos.DrawSphere(currentTarget, 0.1f);
+    }
+
     public void StopAllMovement()
     {
 		rigid.velocity = Vector3.zero;

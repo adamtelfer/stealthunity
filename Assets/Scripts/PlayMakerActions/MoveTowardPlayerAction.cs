@@ -9,7 +9,7 @@ namespace HutongGames.PlayMaker.Actions
     {
         public EnemyController enemyController;
 
-        public float speed = 0.2f;
+        public float speed = 1f;
 
         public override void Reset()
         {
@@ -22,13 +22,10 @@ namespace HutongGames.PlayMaker.Actions
 
         public override void OnEnter()
         {
-            if (enemyController.alerted)
+            enemyController.movementComponent.SetTarget(new Vector3(enemyController.lastKnownPosition.x, enemyController.lastKnownPosition.y, 0f), speed);
+            if (!enemyController.alerted)
             {
-                enemyController.movementComponent.SetTarget(new Vector3(enemyController.lastKnownPosition.x, enemyController.lastKnownPosition.y, 0f), speed);
-            }
-            else
-            {
-                PlayMakerFSM.BroadcastEvent("ALERT_PLAYERLOST");
+                enemyController.behavior.SendEvent("ALERT_PLAYERLOST");
             }
             Finish();
         }
